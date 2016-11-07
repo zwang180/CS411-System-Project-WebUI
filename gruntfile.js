@@ -36,11 +36,11 @@ module.exports = function(grunt) {
           config: 'compass_config.rb'
         } //options
       }, //dev
-      foundation: {
-        options: {
-          config: 'compass_foundation_config.rb'
-        } //options
-      } //foundation
+      // foundation: {
+      //   options: {
+      //     config: 'compass_foundation_config.rb'
+      //   } //options
+      // } //foundation
 
     }, //compass
     watch: {
