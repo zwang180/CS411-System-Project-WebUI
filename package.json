@@ -1,9 +1,9 @@
 {
   "name": "SimpleDB_WebUI",
   "version": "1.0.0",
-  "homepage": "https://github.com/uiuc-web-programming/mp4_client_starter",
+  "homepage": "https://github.com/zwang180/CS411-System-Project-WebUI",
   "authors": [
-    "zwang180 <zwang180@illinois.com>",
+    "zwang180 <zwang180@illinois.com>"
   ],
   "dependencies": {
     "express": "^4.11.1",

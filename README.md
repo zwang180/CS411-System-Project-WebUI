@@ -2,7 +2,7 @@
 
 ## Setup
 ```
-git clone https://github.com/uiuc-web-programming/mp4_client_starter.git
+git clone https://github.com/zwang180/CS411-System-Project-WebUI
 cd SimpleDB_WebUI
 npm install
 bower install

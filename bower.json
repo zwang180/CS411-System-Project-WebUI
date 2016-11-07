@@ -1,9 +1,9 @@
 {
   "name": "SimpleDB_WebUI",
   "version": "1.0",
-  "homepage": "https://github.com/uiuc-web-programming/mp4_client_starter",
+  "homepage": "https://github.com/zwang180/CS411-System-Project-WebUI",
   "authors": [
-    "zwang180 <zwang180@illinois.com>",
+    "zwang180 <zwang180@illinois.com>"
   ],
   "ignore": [
     "**/.*",
@@ -14,5 +14,12 @@
     "tests"
   ],
   "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "jquery": "^3.1.1",
+    "foundation-sites": "^6.2.4"
+  },
+  "resolutions": {
+    "jquery": "^3.1.1"
   }
 }
