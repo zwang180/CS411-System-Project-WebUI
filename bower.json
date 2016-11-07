@@ -1,0 +1,18 @@
+{
+  "name": "SimpleDB_WebUI",
+  "version": "1.0",
+  "homepage": "https://github.com/uiuc-web-programming/mp4_client_starter",
+  "authors": [
+    "zwang180 <zwang180@illinois.com>",
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
