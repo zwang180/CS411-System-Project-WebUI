@@ -1,4 +1,4 @@
-<div class="query_form">
+<div class="update_form">
 	<form name="updateInput">
     <div class="row">
       <div class="small-6 small-centered text-center">
@@ -22,8 +22,8 @@
     </div>
     <div class="row">
       <div class="small-12 columns">
-        <p ng-show="result">Query Time: {{ result.time }}</p>
-        <p ng-show="result">Query Result:</p>
+        <p ng-show="result">Update Time: {{ result.time }}</p>
+        <p ng-show="result">Update Result:</p>
         <p ng-show="result.error" id="error">Error:</p>
         <p ng-show="result.error" id="error-msg"></p>
         <p ng-show="result && !result.error">{{ result.data[0] }}
