@@ -1,0 +1,67 @@
+<div class="query_form">
+	<form>
+    <div class="row">
+      <div class="small-6 small-centered text-center">
+        <h6>Enter Your Query Statement Below</h6>
+      </div>
+    </div>
+	  <div class="row">
+      <div class="small-7 small-centered columns">
+        <div class="row">
+          <div class="small-1 columns text-center">
+            <label for="select" class="text-right middle">SELECT</label>
+          </div>
+          <div class="small-11 columns">
+            <input ng-model="select" type="text" placeholder="" aria-describedby="select">
+            <p class="help-text" id="select">Multiple field names should be seperated by comma</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-1 columns text-center">
+            <label for="from" class="text-right middle">FROM</label>
+          </div>
+          <div class="small-11 columns">
+            <input ng-model="from" type="text" placeholder="" aria-describedby="from">
+            <p class="help-text" id="from">Multiple database names should be seperated by comma</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-1 columns text-center">
+            <label for="where" class="text-right middle">WHERE</label>
+          </div>
+          <div class="small-11 columns">
+            <input ng-model="where" type="text" placeholder="" aria-describedby="where">
+            <p class="help-text" id="where">Leave blank if you do not need WHERE clause</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns text-center">
+            <button ng-click="query()" class="button tiny info">Submit Query</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <p ng-show="result">Query Time: {{ result.time }}</p>
+        <p ng-show="result">Query Result({{ result.data.length }} Records):</p>
+        <p ng-show="result.error" id="error">Error:</p>
+        <p ng-show="result.error" id="error-msg"></p>
+        <table ng-show="result && !result.error" class="text-center">
+          <thead>
+            <tr>
+              <th ng-show="result"></th>
+              <th ng-repeat="field in result.fields" class="text-center">{{ field }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="row in result.data">
+              <td ng-show="result">{{ $index + 1 }}</td>
+              <td ng-repeat="col in row track by $index">{{ col }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+</div>

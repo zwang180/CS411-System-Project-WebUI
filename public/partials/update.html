@@ -1,0 +1,33 @@
+<div class="query_form">
+	<form name="updateInput">
+    <div class="row">
+      <div class="small-6 small-centered text-center">
+        <h6>Enter Your Update Statement Below</h6>
+      </div>
+    </div>
+	  <div class="row">
+      <div class="small-8 small-centered columns">
+        <div class="row">
+          <div class="small-12 columns">
+            <textarea ng-model="statement" placeholder="" aria-describedby="update" id="update-text" ng-change="check()" required></textarea>
+            <p class="help-text" id="update">Enter your update statement here</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns text-center">
+            <button ng-click="update()" ng-disabled="!valid" class="button tiny info">Submit Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <p ng-show="result">Query Time: {{ result.time }}</p>
+        <p ng-show="result">Query Result:</p>
+        <p ng-show="result.error" id="error">Error:</p>
+        <p ng-show="result.error" id="error-msg"></p>
+        <p ng-show="result && !result.error">{{ result.data[0] }}
+      </div>
+    </div>
+  </form>
+</div>
