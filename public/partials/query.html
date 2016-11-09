@@ -12,7 +12,7 @@
             <label for="select" class="text-right middle">SELECT</label>
           </div>
           <div class="small-11 columns">
-            <input ng-model="select" type="text" placeholder="" aria-describedby="select">
+            <input ng-model="select" type="text" placeholder="" aria-describedby="select" ng-change="check()">
             <p class="help-text" id="select">Multiple field names should be seperated by comma</p>
           </div>
         </div>
@@ -21,7 +21,7 @@
             <label for="from" class="text-right middle">FROM</label>
           </div>
           <div class="small-11 columns">
-            <input ng-model="from" type="text" placeholder="" aria-describedby="from">
+            <input ng-model="from" type="text" placeholder="" aria-describedby="from" ng-change="check()">
             <p class="help-text" id="from">Multiple database names should be seperated by comma</p>
           </div>
         </div>
@@ -36,7 +36,7 @@
         </div>
         <div class="row">
           <div class="small-12 columns text-center">
-            <button ng-click="query()" class="button tiny info">Submit Query</button>
+            <button ng-click="query()" ng-disabled="!valid" class="button tiny info">Submit Query</button>
           </div>
         </div>
       </div>

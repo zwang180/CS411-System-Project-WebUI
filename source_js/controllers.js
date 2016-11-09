@@ -2,6 +2,7 @@ var mp4Controllers = angular.module('mp4Controllers', []);
 
 mp4Controllers.controller('QueryController', ['$scope', '$window', '$http', function($scope, $window, $http) {
   $scope.endpoint = $window.sessionStorage.query || "http://localhost:8080/SimpleDBRestAPI/api/query/";
+  $scope.valid = false;
   $scope.select = "";
   $scope.from = "";
   $scope.where = "";
@@ -10,6 +11,12 @@ mp4Controllers.controller('QueryController', ['$scope', '$window', '$http', func
   $scope.statement = function() {
     var stmt = "select " + $scope.select + " from " + $scope.from;
     return $scope.where === "" ? stmt : (stmt + " where " + $scope.where);
+  }
+
+  $scope.check = function() {
+    var select_valid = $scope.select === undefined ? false : $scope.select.length !== 0;
+    var from_valid = $scope.from === undefined ? false : $scope.from.length !== 0;
+    $scope.valid = select_valid && from_valid;
   }
 
   $scope.query = function(){
