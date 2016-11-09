@@ -3,9 +3,9 @@ var mp4Controllers = angular.module('mp4Controllers', []);
 mp4Controllers.controller('QueryController', ['$scope', '$window', '$http', function($scope, $window, $http) {
   $scope.endpoint = $window.sessionStorage.query || "http://localhost:8080/SimpleDBRestAPI/api/query/";
   $scope.valid = false;
-  $scope.select = "";
-  $scope.from = "";
-  $scope.where = "";
+  $scope.select = "*";
+  $scope.from = "STUDENT";
+  $scope.where = "majorid = 10 or majorid = 20";
   $scope.result = "";
 
   $scope.statement = function() {
@@ -32,7 +32,7 @@ mp4Controllers.controller('QueryController', ['$scope', '$window', '$http', func
 
 mp4Controllers.controller('UpdateController', ['$scope', '$window', '$http', function($scope, $window, $http) {
   $scope.endpoint = $window.sessionStorage.update || "http://localhost:8080/SimpleDBRestAPI/api/update/";
-  $scope.statement = "";
+  $scope.statement = "update STUDENT set MajorId=30 where SName = 'amy'";
   $scope.result = "";
 
   $scope.valid = false;
