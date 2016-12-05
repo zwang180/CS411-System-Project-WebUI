@@ -6,34 +6,43 @@
       </div>
     </div>
 	  <div class="row">
-      <div class="small-7 small-centered columns">
+      <div class="small-7 small-offset-2 columns">
         <div class="row">
-          <div class="small-1 columns text-center">
+          <div class="small-2 columns text-center">
             <label for="select" class="text-right middle">SELECT</label>
           </div>
-          <div class="small-11 columns">
+          <div class="small-10 columns">
             <input ng-model="select" type="text" placeholder="" aria-describedby="select" ng-change="check()">
             <p class="help-text" id="select">Multiple field names should be seperated by comma</p>
           </div>
         </div>
         <div class="row">
-          <div class="small-1 columns text-center">
+          <div class="small-2 columns text-center">
             <label for="from" class="text-right middle">FROM</label>
           </div>
-          <div class="small-11 columns">
+          <div class="small-10 columns">
             <input ng-model="from" type="text" placeholder="" aria-describedby="from" ng-change="check()">
             <p class="help-text" id="from">Multiple database names should be seperated by comma</p>
           </div>
         </div>
         <div class="row">
-          <div class="small-1 columns text-center">
+          <div class="small-2 columns text-center">
             <label for="where" class="text-right middle">WHERE</label>
           </div>
-          <div class="small-11 columns">
+          <div class="small-10 columns">
             <input ng-model="where" type="text" placeholder="" aria-describedby="where">
             <p class="help-text" id="where">Leave blank if you do not need WHERE clause</p>
           </div>
         </div>
+				<div class="row">
+					<div class="small-2 columns text-center">
+						<label for="groupby" class="text-right middle">GROUP BY</label>
+					</div>
+					<div class="small-10 columns">
+						<input ng-model="groupby" type="text" placeholder="" aria-describedby="groupby">
+						<p class="help-text" id="groupby">Leave blank if you do not need GROUPBY clause</p>
+					</div>
+				</div>
         <div class="row">
           <div class="small-12 columns text-center">
             <button ng-click="query()" ng-disabled="!valid" class="button tiny info">Submit Query</button>

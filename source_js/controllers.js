@@ -6,11 +6,14 @@ mp4Controllers.controller('QueryController', ['$scope', '$window', '$http', func
   $scope.select = "*";
   $scope.from = "STUDENT";
   $scope.where = "majorid = 10 or majorid = 20";
+  $scope.groupby = "sname";
   $scope.result = "";
 
   $scope.statement = function() {
     var stmt = "select " + $scope.select + " from " + $scope.from;
-    return $scope.where === "" ? stmt : (stmt + " where " + $scope.where);
+    stmt = ($scope.where === "" || $scope.where === undefined || $scope.where === null) ? stmt : (stmt + " where " + $scope.where);
+    stmt = ($scope.groupby === "" || $scope.groupby === undefined || $scope.where === null) ? stmt : (stmt + " group by " + $scope.groupby);
+    return stmt + ';'
   }
 
   $scope.check = function() {
